@@ -16,7 +16,7 @@ if not device_id:
     assert len(device_id) > 0
 
 print("🚨device id:", device_id)
-cmd = f"xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'platform=iOS,id={device_id}' test"
+cmd = f"xcodebuild test -allowProvisioningUpdates -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'platform=iOS,id={device_id}'"
 
 child_process = subprocess.Popen(
     cmd,
@@ -29,9 +29,11 @@ child_process = subprocess.Popen(
 
 
 def kill(sig, frame):
-    child_process.terminate()
-    child_process.wait()
+    print("💀 killing the child process")
+
+    child_process.send_signal(signal.SIGKILL)
     sys.exit(0)
+
 
 # make sure we kill the child process on ctrl+C
 signal.signal(signal.SIGINT, kill)

@@ -3,9 +3,14 @@ import signal
 import sys
 import re
 import json
+import argparse
 
-# can override the device id here
-device_id = None
+parser = argparse.ArgumentParser(description="Get device ID for xcode")
+parser.add_argument('--device_id', type=str, help='Specify a device ID to use', required=False)
+args = parser.parse_args()
+
+device_id = args.device_id
+
 # otherwise use the most recent used device in xcode
 if not device_id:
     cmd = "plutil -extract DVTDevicesWindowControllerSelectedDeviceIdentifier raw ~/Library/Preferences/com.apple.dt.Xcode.plist"

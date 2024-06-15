@@ -1,0 +1,111 @@
+"/actions" POST
+"/alert/accept" POST
+"/alert/dismiss" POST
+"/alert/text" GET
+"/alert/text" POST
+"/appium/settings" GET
+"/appium/settings" POST
+
+# search element by xpath
+"/element" POST
+
+"/element/:uuid/attribute/:name" GET
+
+# clear the text in the text input
+"/element/:uuid/clear" POST
+
+"/element/:uuid/click" POST
+"/element/:uuid/displayed" GET
+"/element/:uuid/element" POST
+"/element/:uuid/elements" POST
+"/element/:uuid/enabled" GET
+"/element/:uuid/name" GET
+"/element/:uuid/rect" GET
+"/element/:uuid/screenshot" GET
+"/element/:uuid/selected" GET
+"/element/:uuid/text" GET
+"/element/:uuid/value" POST
+"/element/active" GET
+"/elements" POST
+"/orientation" GET
+"/orientation" POST
+"/rotation" GET
+"/rotation" POST
+"/screenshot" GET
+"/session" POST
+"/source" GET
+"/status" GET
+"/timeouts" POST
+"/url" POST
+"/wda/accessibleSource" GET
+"/wda/activeAppInfo" GET
+"/wda/alert/buttons" GET
+"/wda/apps/activate" POST
+"/wda/apps/launch" POST
+"/wda/apps/launchUnattached" POST
+"/wda/apps/list" GET
+"/wda/apps/state" POST
+"/wda/apps/terminate" POST
+"/wda/batteryInfo" GET
+"/wda/deactivateApp" POST
+"/wda/device/appearance" POST
+"/wda/device/info" GET
+"/wda/device/location" GET
+"/wda/doubleTap" POST
+"/wda/dragfromtoforduration" POST
+"/wda/element/:uuid/accessibilityContainer" GET
+"/wda/element/:uuid/accessible" GET
+"/wda/element/:uuid/doubleTap" POST
+"/wda/element/:uuid/dragfromtoforduration" POST
+
+"/wda/element/:uuid/forceTouch" POST
+"/wda/element/:uuid/getVisibleCells" GET
+"/wda/element/:uuid/keyboardInput" POST
+"/wda/element/:uuid/pinch" POST
+"/wda/element/:uuid/pressAndDragWithVelocity" POST
+"/wda/element/:uuid/rotate" POST
+"/wda/element/:uuid/scroll" POST
+
+# move the element into the view port
+"/wda/element/:uuid/scrollTo" POST
+
+"/wda/element/:uuid/swipe" POST
+"/wda/element/:uuid/tap" POST
+"/wda/element/:uuid/tapWithNumberOfTaps" POST
+"/wda/element/:uuid/touchAndHold" POST
+"/wda/element/:uuid/twoFingerTap" POST
+"/wda/expectNotification" POST
+"/wda/forceTouch" POST
+"/wda/getPasteboard" POST
+"/wda/healthcheck" GET
+"/wda/homescreen" POST
+"/wda/keyboard/dismiss" POST
+"/wda/keys" POST
+"/wda/lock" POST
+"/wda/locked" GET
+"/wda/performAccessibilityAudit" POST
+"/wda/performIoHidEvent" POST
+"/wda/pickerwheel/:uuid/select" POST
+"/wda/pinch" POST
+"/wda/pressAndDragWithVelocity" POST
+"/wda/pressButton" POST
+"/wda/resetAppAuth" POST
+"/wda/rotate" POST
+"/wda/screen" GET
+"/wda/scroll" POST
+"/wda/setPasteboard" POST
+"/wda/simulatedLocation" DELETE
+"/wda/simulatedLocation" GET
+"/wda/simulatedLocation" POST
+"/wda/siri/activate" POST
+"/wda/swipe" POST
+"/wda/tap" POST
+"/wda/tapWithNumberOfTaps" POST
+"/wda/touch_id" POST
+"/wda/touchAndHold" POST
+"/wda/twoFingerTap" POST
+"/wda/unlock" POST
+"/wda/video" GET
+"/wda/video/start" POST
+"/wda/video/stop" POST
+"/window/size" GET
